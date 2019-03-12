@@ -168,7 +168,7 @@ $ openssl rand -hex 32 > test.txt
 ```
 
 
-Copy and paste test.txt into proxy_auth_token
+Copy and paste test.txt into the jupyter_hosts file at the line: proxy_auth_token. If you're using vim, use 'y' to copy and 'p' to paste in the default mode (not insert mode).
 
 
 ## Generate a self-signed SSL certificate
