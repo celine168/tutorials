@@ -26,6 +26,9 @@
 
    - b/c ansible doesnt have the "ansible-conda" module automatically
 
+1. install ssh
+   - run "sudo apt-get install ssh"
+
 1. allow ssh to run
 
    - run `ssh-keygen` (just leave the stuff it asks blank)
