@@ -287,7 +287,7 @@ Save the settings.
 ```
 $ jupyterhub
 ```
-Note: If jupyterhub is not running on a port, use 'sudo lsof -t -i:<port>' to find id of process running on that port and kill it with 'sudo kill -9 <port>'
+# Note: If jupyterhub is not running on a port, use 'sudo lsof -t -i:<port>' to find id of process running on that port and kill it with 'sudo kill -9 <port>'
 
 Go to `localhost:8000/`
 
