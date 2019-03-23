@@ -297,7 +297,7 @@ $ sudo lsof -t -i:<port>
  to find id of process running on that port and kill it with:
 
 ```
-$ sudo kill -9 <port>
+$ sudo kill -9 <process id>
 ```
 
 Go to `localhost:8000/`
