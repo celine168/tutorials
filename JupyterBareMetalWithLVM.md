@@ -6,7 +6,7 @@
 
 ## Source
 
-[https://youtu.be/x2cNglQkSlc](https://youtu.be/x2cNglQkSlc) 
+[https://youtu.be/x2cNglQkSlc](https://youtu.be/x2cNglQkSlc)
 
 I followed this video loosely. The amount of space I used and the number of disks are different.
 
@@ -177,7 +177,7 @@ SSL certificate:
 
 Create self-signed ssl certificates to make nginx work
 
-Source: [https://www.akadia.com/services/ssh_test_certificate.html](https://www.akadia.com/services/ssh_test_certificate.html) 
+Source: [https://www.akadia.com/services/ssh_test_certificate.html](https://www.akadia.com/services/ssh_test_certificate.html)
 
 
 ```
@@ -288,6 +288,17 @@ Save the settings.
 $ jupyterhub
 ```
 
+ **Note:** If jupyterhub is not running on a port, use:
+
+```
+$ sudo lsof -t -i:<port>
+```
+
+ to find id of process running on that port and kill it with:
+
+```
+$ sudo kill -9 <process id>
+```
 
 Go to `localhost:8000/`
 
