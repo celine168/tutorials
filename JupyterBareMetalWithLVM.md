@@ -280,6 +280,7 @@ Set Host Port to 8000 and Guest Port to 8000 also. Leave others blank.
 
 Save the settings.
 
+To SSH into your server from your local computer, run `ssh <username>@localhost -p 8000`.
 
 ### Run JupyterHub
 
