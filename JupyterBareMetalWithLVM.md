@@ -38,7 +38,9 @@ The three partitions:
 2. 1 primary partition, beginning location, with the leftover space (I had 19.5 GB). Use as physical volume for RAID.
 
 
-## Choose Configure Software RAID1
+## Configuring RAID 1
+
+Choose Configure Software RAID1
 
 We will create two MD devices.
 
