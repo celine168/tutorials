@@ -3,7 +3,7 @@
 This tutorial teaches how to set up Google OAuth on JupyterHub. It loosely follows some of the instructions under the [jupyterhub/oauthenticator](https://github.com/jupyterhub/oauthenticator), but does not use the files in the repository.
 
 
-# Getting your credentials from Google Console
+## Getting your credentials from Google Console
 
 Google Developers Console generates the client ID and client secret, which is needed to reconfigure JupyterHub.
 
@@ -48,12 +48,6 @@ https://<your domain>
 ```
 
 
-Ex. 
-
-[http://sealion.genomecenter.ucdavis.edu](http://sealion.genomecenter.ucdavis.edu/)
-
-[https://sealion.genomecenter.ucdavis.edu](http://sealion.genomecenter.ucdavis.edu/)
-
 For **Authorized redirect URIs**, add: 
 
 
@@ -62,12 +56,6 @@ http://<your domain>/hub/oauth_callback
 https://<your domain>/hub/oauth_callback
 ```
 
-
-Ex.
-
-http://sealion.genomecenter.ucdavis.edu/hub/oauth_callback
-
-https://sealion.genomecenter.ucdavis.edu/hub/oauth_callback
 
 Click **Create**
 
@@ -99,10 +87,10 @@ oauth_login_service: 'UC Davis'
 
 
 
-# Re-running Ansible
+## Re-running Ansible
 
 
-## Modifying config.yml to only re-run specific tasks
+### Modifying config.yml to only re-run specific tasks
 
 The `jupyter_hosts` file gives the settings for Ansible to set up JupyterHub. Changing the `jupyter_hosts` file alone doesn’t actually change anything to your JupyterHub configuration until you run Ansible Playbook again.
 
@@ -127,7 +115,7 @@ In `jupyterhub-deploy-teaching/roles/jupyterhub/tasks/config.yml`, add the tag `
 
 
 
-## Modifying the jupyterhub_config.py.j2 template file
+### Modifying the jupyterhub_config.py.j2 template file
 
 The template file `jupyterhub-deploy-teaching/roles/jupyterhub/templates/jupyterhub_config.py.j2` generates the `jupyterhub_config.py` file when Ansible playbook is run. 
 
@@ -154,7 +142,7 @@ ansible-playbook -l local -u spicy --tags "configuration" --ask-become-pass depl
 This will regenerate the `jupyterhub_config.py` in the `/etc/jupyterhub/` directory.
 
 
-# Running JupyterHub
+## Running JupyterHub
 
 When running `jupyterhub`, the JupyterHub looks in the home directory for `jupyterhub_config.py`.
 
@@ -163,6 +151,3 @@ Move the `jupyterhub_config.py` file to your home directory. Alternatively, you 
 If you are SSHing into your server, make sure ports 8000 and 443 are redirected to your `localhost:8000` and `localhost:443` respectively.
 
 Run `jupyterhub` and navigate to `localhost:8000` in your browser.
-
-
-<!-- Docs to Markdown version 1.0β17 -->
